@@ -13,9 +13,7 @@ fn main() {
 
     let val = val.unwrap();
 
-    let mut nums = Numerals::new();
-
-    nums.draw(val);
-
+    let nums = Numerals::new(val);
     nums.print();
+
 }

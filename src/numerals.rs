@@ -8,7 +8,7 @@ pub struct Numerals {
 impl Numerals {
     pub fn new(value: u32) -> Self {
         assert!(
-            value <= 9999 && value >= 0,
+            (0..=9999).contains(&value),
             "Value must be between 1 and 9999"
         );
 
@@ -998,8 +998,7 @@ mod tests {
         ];
 
         for (value, t) in testcases {
-            let mut encoder = Numerals::new();
-            encoder.draw(value);
+            let encoder = Numerals::new(value);
 
             let mut str = String::new();
             for row in encoder.grid {
