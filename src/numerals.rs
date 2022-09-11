@@ -7,7 +7,10 @@ pub struct Numerals {
 
 impl Numerals {
     pub fn new(value: u32) -> Self {
-        assert!(value <= 9999, "Value must be less than (or equal to) 9999");
+        assert!(
+            value <= 9999 && value >= 0,
+            "Value must be between 1 and 9999"
+        );
 
         let mut grid = [[false; 15]; 15];
         for line in &mut grid {
