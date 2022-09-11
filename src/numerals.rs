@@ -166,7 +166,7 @@ impl Numerals {
                 self.draw_hundreds(4);
             }
             6 => {
-                self.draw_vertical(10, 15, 11);
+                self.draw_vertical(10, 15, 11); 
             }
             7 => {
                 self.draw_hundreds(1);
